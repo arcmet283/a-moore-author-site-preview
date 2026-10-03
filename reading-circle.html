@@ -165,11 +165,13 @@
   .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
   .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .mobile-menu{
-    display:none;flex-direction:column;background:var(--paper);
-    position:absolute;top:100%;left:0;right:0;padding:6px 28px 22px;gap:0;
-    border-bottom:1px solid var(--rule);z-index:100;
+    display:none;flex-direction:column;background:#fff;
+    position:absolute;top:calc(100% - 10px);right:28px;left:auto;min-width:180px;
+    padding:6px 20px;gap:0;z-index:100;border-radius:8px;
+    border:1px solid var(--rule);box-shadow:0 12px 30px -10px rgba(46,36,25,.25);
   }
-  .mobile-menu a{color:var(--ink);font-family:'Fraunces',serif;font-size:18px;font-weight:600;padding:14px 0;border-bottom:1px solid var(--rule);}
+  .mobile-menu a{color:var(--ink);font-family:'Fraunces',serif;font-size:16px;font-weight:600;padding:13px 0;border-bottom:1px solid var(--rule);white-space:nowrap;}
+  .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu.is-open{display:flex;}
   header{position:relative;}
 
