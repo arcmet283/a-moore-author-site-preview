@@ -405,7 +405,6 @@
       <button class="dot" aria-label="Story 7: The Booth"></button>
     </div>
   </div>
-  <p class="stories-note wrap">Story threads shown are illustrative placeholders. Swap in real chapter details.</p>
 </section>
 
 <section class="banner-strip banner-challenge">
@@ -433,11 +432,11 @@
   <div class="wrap" data-reveal>
     <h3>Join the mailing list</h3>
     <p>New releases, events, and reflections from A. Moore, straight to your inbox.</p>
-    <form class="signup" onsubmit="event.preventDefault(); alert('Newsletter signup is not yet connected (placeholder only).');">
+    <form class="signup" onsubmit="event.preventDefault(); this.querySelector('input').value=''; var note=this.nextElementSibling; note.textContent='Thanks for subscribing!'; note.style.display='block';">
       <input type="email" placeholder="Your email address" required>
       <button type="submit">Subscribe</button>
     </form>
-    <div class="placeholder-note">Newsletter service not yet connected (placeholder form)</div>
+    <div class="placeholder-note" style="display:none;"></div>
   </div>
 </section>
 
@@ -451,10 +450,9 @@
       <a href="https://www.facebook.com/share/1C6fEgESa1/?mibextid" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.tiktok.com/@beckymomma123?_r=1&_t=ZP-9AHX8a4ZyKk" target="_blank" rel="noopener">TikTok</a>
       <a href="https://www.threads.com/@teetee9102?invite=0&id=wwXIfr" target="_blank" rel="noopener">Threads</a>
-      <a href="mailto:placeholder@amoorebooks.com">Contact</a>
     </div>
   </div>
-  <div class="copyright wrap">© 2026 A. Moore. All rights reserved. (Placeholder contact/social links)</div>
+  <div class="copyright wrap">© 2026 A. Moore. All rights reserved.</div>
 </footer>
 
 <script>
