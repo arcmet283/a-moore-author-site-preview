@@ -553,25 +553,16 @@
       slideEls.forEach(function(el, idx){ el.classList.toggle('is-active', idx === slideIndex); });
       dotEls.forEach(function(el, idx){ el.classList.toggle('is-active', idx === slideIndex); });
     }
-    function startAutoplay(){
-      stopAutoplay();
-      slideTimer = setInterval(function(){ showSlide(slideIndex + 1); }, 5000);
-    }
-    function stopAutoplay(){ if(slideTimer){ clearInterval(slideTimer); slideTimer = null; } }
-
     var prevBtn = document.getElementById('slidePrev');
     var nextBtn = document.getElementById('slideNext');
     var slideshowEl = document.getElementById('slideshow');
     if(prevBtn && nextBtn && slideEls.length){
-      prevBtn.addEventListener('click', function(){ showSlide(slideIndex - 1); startAutoplay(); });
-      nextBtn.addEventListener('click', function(){ showSlide(slideIndex + 1); startAutoplay(); });
+      prevBtn.addEventListener('click', function(){ showSlide(slideIndex - 1); });
+      nextBtn.addEventListener('click', function(){ showSlide(slideIndex + 1); });
       dotEls.forEach(function(dot, idx){
-        dot.addEventListener('click', function(){ showSlide(idx); startAutoplay(); });
+        dot.addEventListener('click', function(){ showSlide(idx); });
       });
-      slideshowEl.addEventListener('mouseenter', stopAutoplay);
-      slideshowEl.addEventListener('mouseleave', startAutoplay);
       showSlide(0);
-      startAutoplay();
     }
   }catch(e){}
 
