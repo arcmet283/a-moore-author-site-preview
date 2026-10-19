@@ -276,8 +276,8 @@
     .social-icon{width:34px;height:34px;}
     .banner-heading{display:block;}
     .banner-challenge-text{display:none;}
-    .hero{min-height:auto;aspect-ratio:1536/1024;padding-top:0;}
-    .hero-bg{top:0;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:var(--bg);}
+    .hero{min-height:calc(90px + 100vw * 1024 / 1536);aspect-ratio:unset;padding-top:0;background:var(--bg);}
+    .hero-bg{top:90px;background-size:contain!important;background-position:center top!important;background-repeat:no-repeat!important;background-color:var(--bg);}
   }
 
   @media(max-width:480px){
